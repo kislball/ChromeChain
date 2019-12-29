@@ -19,9 +19,7 @@ Just send the GET request to ChromeChain with `url` arg, response will be in JSO
 ### Examples:
 
 Example URL:
-`https://here-is-your-link.com?url=https://google.com`
-`url=https://google.com` means that we want to get snapshot of https://google.com
-Lol, I think this is understandable :eyes:
+`https://here-is-your-link.com?url=https://google.com`, where `url=https://google.com` means that we want to get snapshot of `https://google.com`. Lol, I think this is understandable :eyes:
 
 ```python
 # -*- coding: utf-8 -*-
