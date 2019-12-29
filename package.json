@@ -1,6 +1,6 @@
 {
   "name": "ChromeChain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "puppeteer": "2.0.0",
     "node-fetch": "^2.0.0"
