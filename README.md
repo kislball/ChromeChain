@@ -19,7 +19,7 @@ Just send the GET request to ChromeChain with `url` arg, response will be in JSO
 ### Examples:
 
 Example URL:
-`https://here-is-your-link.com?url=https://google.com`, where `url=https://google.com` means that we want to get snapshot of `https://google.com`. Lol, I think this is understandable :eyes:
+`https://chromechain.herokuapp.com?url=https://google.com`, where `url=https://google.com` means that we want to get snapshot of `https://google.com`. Lol, I think this is understandable :eyes:
 
 ```python
 # -*- coding: utf-8 -*-
@@ -29,7 +29,7 @@ import requests
 
 target_website = "google.com"
 
-url = f"https://where-is-chromechain-working.lol?url={target_website}"
+url = f"https://chromechain.herokuapp.com?url={target_website}"
 data = requests.get(url).json()
 
 if data["msg"] == "OK":
