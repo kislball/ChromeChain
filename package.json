@@ -1,0 +1,14 @@
+{
+  "name": "ChromeChain",
+  "version": "1.0.0",
+  "dependencies": {
+    "puppeteer": "2.0.0",
+    "node-fetch": "^2.0.0"
+  },
+  "engines": {
+    "node": "10.17.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
