@@ -68,7 +68,7 @@ async function main() {
   http.createServer((req, res) => {
     var args = url.parse(req.url, true).query || null;
 
-    if (!args) {
+    if (!args.url) {
       
       let msg = {"msg": "ERR", "content": "Provide a target URL, please"};
       res.writeHead(200, {"Content-Type": "application/json"});
