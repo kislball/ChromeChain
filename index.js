@@ -28,7 +28,7 @@ const http = require('http');
 const url = require('url');
 
 var WAIT_UNTIL = process.env.WAIT_UNTIL || 'domcontentloaded';
-var PORT = process.env.PORT || 80;
+var PORT = process.env.PORT;
 var PROXY = process.env.PROXY;
 
 

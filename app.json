@@ -1,8 +1,33 @@
 {
   "name": "ChromeChain",
   "description": "ChromeChain is the easy-to-use web site screenshoter with simple REST API.",
-  "image": "heroku/node",
   "repository": "https://github.com/Naomi-Bot-Open-Source/ChromeChain",
+  "website": "https://naomi.fun",
   "keywords": ["node", "screenshot", "snapshot", "web"],
-  "addons": []
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/node"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+ "env": {
+    "PORT": {
+      "description": "[Required] Web server port",
+      "value": "80",
+      "required": true
+    },
+    "PROXY": {
+      "description": "[Optional] Proxy",
+      "value": "",
+      "required": false
+    },
+    "WAIT_UNTIL": {
+      "description": "[Optional] How long do we wait before taking a screenshot?",
+      "value": "domcontentloaded",
+      "required": false
+    }
+  }
 }
