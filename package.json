@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Naomi-Bot-Open-Source/ChromeChain"
+    "url": "https://github.com/Naomi-Bot-Open-Source/ChromeChain.git"
   },
   "license": "MIT",
   "main": "index.js",
