@@ -1,6 +1,13 @@
 {
   "name": "ChromeChain",
+  "description": "ChromeChain is the easy-to-use web site screenshoter with simple REST API.",
   "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Naomi-Bot-Open-Source/ChromeChain"
+  },
+  "license": "MIT",
+  "main": "index.js",
   "dependencies": {
     "puppeteer": "2.0.0",
     "node-fetch": "^2.0.0"

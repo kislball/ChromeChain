@@ -27,10 +27,6 @@ const fetch = require('node-fetch');
 const http = require('http');
 const url = require('url');
 
-var WAIT_UNTIL = process.env.WAIT_UNTIL || 'domcontentloaded';
-var PORT = process.env.PORT;
-var PROXY = process.env.PROXY;
-
 
 class ChromeChain {
   constructor() {
@@ -38,12 +34,10 @@ class ChromeChain {
   }
 
   async start() {
+    let args = ['--no-sandbox', '--disable-setuid-sandbox'];
+    if (process.env.PROXY) args.add(`--proxy-server=${process.env.PROXY}`);
     this.browser = await puppeteer.launch({
-      args: [
-        //`--proxy-server=${PROXY}`,
-        '--no-sandbox',
-        '--disable-setuid-sandbox'
-      ],
+      args: args,
       defaultViewport: {
         width: 1366,
         height: 768
@@ -54,7 +48,7 @@ class ChromeChain {
   async takeScreenshot(url) {
     url = url.startsWith("http") ? url : `http://${url}`;
     let page = await this.browser.newPage();
-    await page.goto(url, {waitUntil: WAIT_UNTIL});
+    await page.goto(url, {waitUntil: 'domcontentloaded'});
     let shot = await page.screenshot();
     await page.close();
     return shot;
@@ -105,8 +99,8 @@ async function main() {
         
       });
     }
-  }).listen(PORT);
+  }).listen(process.env.PORT);
 }
 
 main();
-console.log(`[OK] Listening on the port ${PORT}`);
+console.log(`[OK] Listening on the port ${process.env.PORT}`);

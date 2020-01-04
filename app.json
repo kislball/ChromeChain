@@ -10,10 +10,10 @@
       "url": "heroku/node"
     },
     {
-      "url": "heroku/ruby"
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome.git"
     }
   ],
- "env": {
+  "env": {
     "PORT": {
       "description": "[Required] Web server port",
       "value": "80",
@@ -22,11 +22,6 @@
     "PROXY": {
       "description": "[Optional] Proxy",
       "value": "",
-      "required": false
-    },
-    "WAIT_UNTIL": {
-      "description": "[Optional] How long do we wait before taking a screenshot?",
-      "value": "domcontentloaded",
       "required": false
     }
   }
