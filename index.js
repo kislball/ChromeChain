@@ -65,7 +65,7 @@ async function main() {
     if (!args.url) {
       
       let msg = {"msg": "ERR", "content": "Provide a target URL, please"};
-      res.writeHead(200, {"Content-Type": "application/json"});
+      res.writeHead(200, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"});
       res.write(JSON.stringify(msg));
       res.end(null);
       
