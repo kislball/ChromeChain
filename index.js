@@ -85,7 +85,7 @@ async function main() {
         .then(json => {
           
           let msg = {"msg": "OK", "content": json.data.link};
-          res.writeHead(200, {"Content-Type": "application/json"})
+          res.writeHead(200, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"})
           res.write(JSON.stringify(msg));
           res.end(null);
           
@@ -93,7 +93,7 @@ async function main() {
       }).catch(err => {
         
         let msg = {"msg": "ERR", "content": `${err}`};
-        res.writeHead(200, {"Content-Type": "application/json"});
+        res.writeHead(500, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"});
         res.write(JSON.stringify(msg));
         res.end(null);
         
