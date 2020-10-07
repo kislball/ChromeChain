@@ -1,7 +1,7 @@
 {
   "name": "ChromeChain",
   "description": "ChromeChain is the easy-to-use web site screenshoter with simple REST API.",
-  "repository": "https://gitlab.com/Naomi-Dev/ChromeChain",
+  "repository": "https://github.com/The-Naomi-Developers/ChromeChain",
   "website": "https://naomi.life",
   "keywords": ["node", "screenshot", "snapshot", "web"],
   "addons": [],
@@ -20,8 +20,28 @@
       "required": true
     },
     "PROXY": {
-      "description": "[Optional] Proxy",
+      "description": "[Optional] Proxy server IP:PORT",
       "value": "",
+      "required": false
+    },
+    "WAIT_BEFORE_SCREENSHOT": {
+      "description": "[Optional] How long we should wait before making a screenshot (milliseconds)?",
+      "value": "1000",
+      "required": false
+    },
+    "SCREENSHOT_WIDTH": {
+      "description": "[Optional] Width of the screenshot (pixels)",
+      "value": "1366",
+      "required": false
+    },
+    "SCREENSHOT_HEIGHT": {
+      "description": "[Optional] Height of the screenshot (pixels)",
+      "value": "768",
+      "required": false
+    },
+    "COOLDOWN": {
+      "description": "[Optional] Cooldown between screenshot requests (milliseconds)",
+      "value": "2000",
       "required": false
     }
   }
