@@ -1,8 +1,8 @@
 {
   "name": "ChromeChain",
   "description": "ChromeChain is the easy-to-use web site screenshoter with simple REST API.",
-  "repository": "https://github.com/Naomi-Bot-Open-Source/ChromeChain",
-  "website": "https://naomi.fun",
+  "repository": "https://gitlab.com/Naomi-Dev/ChromeChain",
+  "website": "https://naomi.life",
   "keywords": ["node", "screenshot", "snapshot", "web"],
   "addons": [],
   "buildpacks": [

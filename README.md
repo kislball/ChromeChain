@@ -50,7 +50,7 @@ Or you can use Heroku:
 ```
 MIT License
 
-Copyright (c) 2019 Naomi-Bot-Open-Source
+Copyright (c) 2019 The-Naomi-Developers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

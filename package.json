@@ -1,11 +1,10 @@
 {
   "name": "chromechain",
   "description": "ChromeChain is the easy-to-use web site screenshoter with simple REST API.",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "main": "index.js",
   "dependencies": {
-    "puppeteer": "2.0.0",
-    "node-fetch": "^2.0.0"
+    "puppeteer": "2.0.0"
   },
   "engines": {
     "node": "10.17.0"
@@ -15,17 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Naomi-Bot-Open-Source/ChromeChain.git"
+    "url": "git+https://github.com/Naomi-Dev/ChromeChain.git"
   },
   "keywords": [
     "snapshot",
     "web",
     "rest-api"
   ],
-  "author": "Naomi-Bot-Open-Source",
+  "author": "The-Naomi-Developers",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Naomi-Bot-Open-Source/ChromeChain/issues"
-  },
-  "homepage": "https://github.com/Naomi-Bot-Open-Source/ChromeChain#readme"
+  "homepage": "https://github.com/Naomi-Dev/ChromeChain#readme"
 }
