@@ -1,10 +1,11 @@
 ## ChromeChain
 ChromeChain is a simple Node.JS REST API to take screenshots of web sites.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/the-naomi-developers/chromechain/badge/master)](https://www.codefactor.io/repository/github/the-naomi-developers/chromechain/overview/master)
+
 Used libraries:
 * http
 * [puppeteer](https://github.com/puppeteer/puppeteer)
-* [node-fetch](https://github.com/bitinn/node-fetch)
 
 If you want to use ChromeChain on Heroku, you should add next buildpacks:
 - heroku/node
@@ -17,26 +18,8 @@ Just send the GET request to ChromeChain with `url` arg, response will be in JSO
 
 
 ### Examples:
+See usage example in `usage_example` directory.
 
-Example URL:
-`https://chromechain.herokuapp.com?url=https://google.com`, where `url=https://google.com` means that we want to get snapshot of `https://google.com`. Lol, I think this is understandable :eyes:
-
-```python
-# -*- coding: utf-8 -*-
-
-""" Python 3.7 example, uses `requests` """
-import requests
-
-target_website = "google.com"
-
-url = f"https://chromechain.herokuapp.com?url={target_website}"
-data = requests.get(url).json()
-
-if data["msg"] == "OK":
-  print("Here is snapshot URL:", data["content"])
-else:
-  print("Error:", data["content"])
-```
 
 ### Setup:
 To setup ChromeChain on your server, just clone the repository, install Node.JS and libraries and then just start it.
@@ -44,7 +27,7 @@ To setup ChromeChain on your server, just clone the repository, install Node.JS 
 
 Or you can use Heroku:
 
- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Naomi-Bot-Open-Source/ChromeChain)
+ [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/The-Naomi-Developers/ChromeChain)
 
 ### License:
 ```
