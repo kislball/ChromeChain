@@ -134,7 +134,7 @@ async function main() {
       if (busy.includes(req.connection.remoteAddress)) {
 
         let msg = {"msg": "ERR", "content": "You are on cooldown. Please, be patient."};
-        res.writeHead(403, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"});
+        res.writeHead(429, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"});
         res.write(JSON.stringify(msg));
         res.end(null);
         return;
