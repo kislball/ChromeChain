@@ -19,4 +19,4 @@ if response.status_code == 200:
   im.show()
 
 else:
-  print("Error:", data["content"])
+  print("Error:", response.json()["content"])
