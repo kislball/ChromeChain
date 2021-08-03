@@ -40,7 +40,7 @@ var busy = [];
 
 // Check if cache directory exists
 if (!fs.existsSync(CACHE_DIR)) {
-  console.log('Making a cache directory because it doest not exist.')
+  console.log('Creating a cache directory since it does not exist')
   fs.mkdirSync(CACHE_DIR);
 
 } else {
@@ -116,7 +116,7 @@ async function main() {
 
     if (!Puppet.browser) {
 
-      let msg = {"msg": "ERR", "content": "Chromium is starting up. Please, make your request later."};
+      let msg = {"msg": "ERR", "content": "Chromium is starting. Please, wait until it is up."};
       res.writeHead(403, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"});
       res.write(JSON.stringify(msg));
       res.end(null);
@@ -133,7 +133,7 @@ async function main() {
 
       if (busy.includes(req.connection.remoteAddress)) {
 
-        let msg = {"msg": "ERR", "content": "You are on cooldown. Please, be patient."};
+        let msg = {"msg": "ERR", "content": "You are being ratelimited. Please, be patient."};
         res.writeHead(429, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"});
         res.write(JSON.stringify(msg));
         res.end(null);
@@ -163,7 +163,7 @@ async function main() {
       }
 
       Puppet.takeScreenshot(args.url).then(bytes => {
-        console.log(`Screenshot of ${base_url} does not exists in cache.`)
+        console.log(`Screenshot of ${base_url} does not exist in cache.`)
 
         // write screenshot into cache file to avoid multiple requests
         // to the given resource
@@ -190,4 +190,4 @@ async function main() {
 }
 
 main();
-console.log(`[OK] Listening on the port ${PORT}`);
+console.log(`[OK] Listening on port ${PORT}`);
